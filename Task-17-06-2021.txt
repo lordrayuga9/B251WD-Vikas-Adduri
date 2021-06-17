@@ -1,0 +1,48 @@
+Task 1-------Various For Loops:-------------------------------------
+//var obj = [
+//  { person: "Name 1", age: "2", company: "GUVI" },
+//  { person: "Name 2", age: "5", company: "GUVI geek" },
+//  { person: "Name 3", age: "8", company: "GUVI geek network" },
+//];
+
+// for (var i in obj) {
+//   for (var j in obj[i]) {
+//     console.log(j + ':'+obj[i][j]);
+//   }
+// }
+// for(let i=0;i<obj.length;i++){
+//   for(let j=0;j<Object.entries(obj[i]).length;j++){
+//     console.log((Object.entries(obj[i])[j]).join(" :"))
+//   }
+//   }
+// for(let i of obj){
+//     // console.log(i)
+//     for(let [j,k] of Object.entries(i)){
+//         console.log(j,k)
+//     }
+// }
+// obj.forEach(x=>{
+    
+//     Object.keys(x).forEach(key=>{
+//         let value = x[key]
+//         console.log(key, value)
+//     })
+    
+// });
+
+Task 2&3---------rest countries------------
+
+// var xhr = new XMLHttpRequest();
+// xhr.open("GET", "https://restcountries.eu/rest/v2/all");
+// xhr.onload = function () {
+//   var data = JSON.parse(this.response);
+//   for(let i in data)
+// {
+        //console.log(data[i])
+      //console.log(data[i].flag)
+      //console.log(data[i].name+" "+data[i].region+" "+data[i].subregion+" "+data[i].population)
+//}
+// };
+
+// xhr.send();
+
