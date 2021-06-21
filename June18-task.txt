@@ -1,0 +1,10 @@
+Task-1:
+let resume ={PersonalInfo:{Name:"Vikas Adduri",Contact:"7396208777",Email:"vikky_3000@hotmail.com"}, 
+            AcademicProfile:{TenthClass:{School:"Narayana",percentage:"90.5",Period:"2010-2011"},TwelfthClass:{College:"Narayana",percentage:"94.1",Period:"2011-2013"},BTECH:{University:"SRM University",CGPA:"7.433",Period:"2013-2017"}}, 
+            Skillset:["HTML","JavaScript"], 
+            PersonalTraits:["Calm and Meticulous","Patient and Quick Learner"], 
+            Hobbies:["Badminton","E-sports","Anime"] } 
+console.log(resume);
+
+
+Task-2:
