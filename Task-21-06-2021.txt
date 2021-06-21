@@ -42,6 +42,20 @@ odd(a);
     }
     console.log(...b) 
 })(a);
+
+
+let odd=(x=>{
+{       let b = []
+    for(let i=0;i<x.length;i++)
+    {
+        if(x[i]%2!==0)
+        {
+            b.push(x[i])
+        }
+    }
+    console.log(...b)
+})
+odd(a);
 })
 
 
@@ -83,7 +97,22 @@ console.log(caps(a));
        a[i]=a[i].join("")
     }
     console.log(...a)
-})(a)
+})(a);
+
+var caps = (x=>{
+    for(let i=0;i<x.length;i++)
+    {
+       x[i]=x[i].split("")
+       x[i][0]=x[i][0].toUpperCase()
+       x[i]=x[i].join("")
+       
+       
+    }
+    
+    return x.join(" ");
+})
+console.log(caps(a));
+
 })
 
 3....Sum of all numbers in an array -----------------------------------------------------------------------------
@@ -123,6 +152,17 @@ console.log(sum(a));
     }
     console.log(tot)
 })(a)
+
+var sum =(x=>{
+    let tot = 0
+    for(let i=0;i<x.length;i++)
+    {
+        tot+=x[i]      
+    }
+    
+    return tot
+})
+console.log(sum(a));
 })
 
 
@@ -200,7 +240,38 @@ prime(a);
     }
 console.log(...b)    
     
-})(a)
+})(a);
+
+var prime = (x=>{   
+  
+    var b = [];
+    for(let i in x)
+    {   
+        let count =0
+        if(x[i]==1)
+            {
+              count =1
+              
+
+            }
+        for(let j=2;j<=x[i]/2;j++)
+        {
+            if(x[i]%j===0)
+            {
+                count=1;
+                break;
+            }
+        }
+    if(count!=1)
+        {
+            b.push(x[i]) 
+        }    
+    
+    }
+console.log(...b)    
+})
+prime(a);
+
 })
 
 5. Return all the palindromes in an array-------------------------------------------------------------------------------
@@ -271,7 +342,34 @@ console.log(palindrome(a));
   }
 console.log(b.join(" "))    
     
-})(a)
+})(a);
+
+var palindrome =(x=>{
+let b = []; 
+  for(let i in x)
+  {     let count =0;
+        
+        x[i]=x[i].split("")
+        for(let j=0;j<Math.abs((x[i].length)/2);j++)
+        {
+            if(x[i][j]!=x[i][x[i].length-1-j])
+            {
+                count=1;
+                x[i]=x[i].join("")
+                break;
+            }
+        
+        }
+        if(count===0)
+        { 
+          x[i]= x[i].join("")
+           b.push(x[i])
+        }
+  }
+  return b.join(' ');
+      
+})
+console.log(palindrome(a));
 })
 Return median of two sorted arrays of same size ---------------------------------------------------------
 const readline = require("readline");
