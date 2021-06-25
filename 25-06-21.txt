@@ -1,0 +1,53 @@
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src = "script.js"></script>
+</body>
+</html>
+
+-------------------------------------------------
+
+JS
+
+var request = new XMLHttpRequest();
+request.open("GET",'https://restcountries.eu/rest/v2/all',true);
+request.send();
+request.onload=function(){
+    var data = JSON.parse(this.response);
+  //Get all the countries from Asia continent /region using Filter function
+    var res = data.filter(a=>a.region=="Asia").map(a=>a.name);
+    console.log(res);                  
+   
+//Get all the countries with a population of less than 2 lakhs using Filter function
+    var pop = data.filter(a=>a.population < 200000).map(a=>a.name);
+    console.log(pop);                  
+//Print the following details name, capital, flag using forEach function 
+    data.forEach(element => {
+        console.log(`Name:${element.name}--Capital:${element.capital}--Flag:${element.flag}`)
+    });                               
+ // Print the total population of countries using reduce function
+    var totpop = data.reduce((a,b)=>{
+        return a+ b.population;
+    },0)
+    console.log(totpop);               
+//Print the country which use US Dollars as currency.
+    var curr = data.filter(a=>{
+        for(let i in a.currencies)
+        {   
+           if(a.currencies[i].code==="USD"){
+            return a.currencies[i].code==="USD";
+           }
+            
+        }
+    }).map(a=>a.name)
+    console.log(curr);
+        
+}
