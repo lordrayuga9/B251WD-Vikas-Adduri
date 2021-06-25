@@ -10,7 +10,10 @@ class Movie{
     get PG(){
             if(this.rating=="PG"){
                 
-           return this.title
+                return this.title
+            }
+            else{
+                return ""
             }
          
        
@@ -20,13 +23,16 @@ class Movie{
 }
 
 let Movies= [new Movie("Casino Royale","Eon Productions","PG13")];
-let b =[new Movie("Casino Royale","Eon Productions","PG")];
+let b =[new Movie("Casino Royale","Eon Productions","PG"),new Movie("Baahubali","GEETA ARTS","PG13")];
 console.log(b[0].rating)
 let x=[];
 let c = [1,2,3,4,5]
 for(let i in b){
+    let z = b[i].PG;
+    if(z!==""){
     
     x.push(b[i].PG)
+    }
     
 }
 console.log(x)
