@@ -1,0 +1,137 @@
+1.<!-- <!DOCTYPE html>
+<html>
+<body>
+ <script>
+ alert( "I’m JavaScript!");
+ </script>
+ Whats the error in this ?
+ The alert has one quotation.
+</body>
+</html> -->
+
+------------------------------------------------------------------------------------------------------------------------
+2.Find the culprit and invoke the alert
+fix.html
+<!DOCTYPE html>
+<html>
+<body>
+ <script src=”scripts.js”></script>
+</body>
+</html>
+scripts.js
+alert(“I’m invoked!”);
+
+----------------------------------------------------------------------------------------------------------------------------
+3.Explain the below how it works
+explain.html
+<!DOCTYPE html>
+<html>
+<body>
+ <script src=”script.js”></script>
+</body>
+</html>
+script.js
+alert("I'm JavaScript!");
+alert('Hello') // this line is not having semicolon(This line works because javascript is forgiving type when it comes to semicolons) 
+alert(`Wor
+ ld`)
+alert(3 +
+1
++ 2); // this is multiple line code and its working(This is working because the code has open bracket and it consideres the end of the code only after the closing bracket)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+4.Fix the below to alert Guvi geek
+fix.html
+<!DOCTYPE html>
+<html>
+<body>
+ <script src=”script.js”></script>
+</body>
+</html>
+script.js
+let admin=9, fname=10.5; 
+fname = "Guvi";
+lname = "geek"
+admin = fname+" "+lname;
+alert( admin ); // "Guvi geek"
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+5.Fix the below to alert hello Guvi geek
+fix.html
+<!DOCTYPE html>
+<html>
+<body>
+ <script src=”script.js”></script>
+</body>
+</html>
+script.js
+let fname=10.5; 
+fname = "Guvi";
+lname = "geek"
+let name = fname+" "+lname;
+alert( `hello ${name}` );
+
+-----------------------------------------------------------------------------------------------------------------------------------
+6.Fix the below to alert sum of two numbers
+fix.html
+<!DOCTYPE html>
+<html>
+<body>
+ <script src=”script.js”></script>
+</body>
+</html>
+script.js
+let a = prompt("First number?");
+let b = prompt("Second number?");
+alert(+a + +b);
+
+------------------------------------------------------------------------------------------------------------------------------------
+7.var a = "2" > "12";
+//Don't touch below this
+if (a) {
+  console.log("Code is Blasted")
+}
+else
+{
+  console.log("Diffused") 
+}
+Here variable a is a boolean value and it compares 2 and 12. In Javascript the usual comparision btwn any 2 numbers is done by dictionary sort, and since 2 is greater than 1 it retuns true and we get blasted as output.
+to get diffused e just need to give 02 instead of only 2.
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+8.How to get the success in console.
+let a = prompt("Enter a number?");
+//Don't modify any code below this
+if (a) {
+ console.log( 'OMG it works for any number inc 0' );
+}
+else
+{
+ console.log( "Success" );
+}// we just need to  leave the promp empty to get success.
+
+---------------------------------------------------------------------------------------------------------------------
+
+9.How to get the correct score in console.
+let value = prompt('How many runs you scored in this ball');
+if (value === 4) {
+      console.log("You hit a Four");
+} else if (value === 6) {
+      console.log("You hit a Six");
+} else if(value==="") {
+      console.log("I couldn't figure out");
+}
+else{
+  console.log(value);
+  }
+  
+  ----------------------------------------------------------------------------------------------------------------------------
+  
+  10.Fix the code to welcome the Employee
+  let login = 'Employee';
+let message = (login == 'Employee') ? "Welcome" :
+  (login == 'Director') ? 'Greetings' :
+  (login == '') ? 'No login' :
+  '';
+console.log(message);
