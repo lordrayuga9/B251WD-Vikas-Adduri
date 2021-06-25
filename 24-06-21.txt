@@ -1,0 +1,85 @@
+Class Movie:-----------------------------------------------------------------
+
+
+class Movie{
+    constructor(title,studio,rating="PG"){
+        this.title=title,this.studio=studio,this.rating=rating;
+        
+    }
+   
+    get PG(){
+            if(this.rating=="PG"){
+                
+           return this.title
+            }
+         
+       
+    }
+       
+    
+}
+
+let Movies= [new Movie("Casino Royale","Eon Productions","PG13")];
+let b =[new Movie("Casino Royale","Eon Productions","PG")];
+console.log(b[0].rating)
+let x=[];
+let c = [1,2,3,4,5]
+for(let i in b){
+    
+    x.push(b[i].PG)
+    
+}
+console.log(x)
+
+-------------------------------------------------------------------------------------------------------------
+
+Class Circle
+
+class Circle{
+    constructor(radius,color){
+        this.radius=radius;
+        this.color=color;
+    }
+    get area(){
+        return (22/7*this.radius*this.radius);
+    }
+    get perimeter(){
+        return (2*22/7*this.radius)
+    }
+    
+}
+let pie= new Circle(7,"red")
+console.log(pie.area)
+console.log(pie.perimeter)
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Person Details:
+
+class Person{
+    constructor(name,age,sex,company,experience){
+        this.name=name,this.age=age,this.sex=sex,this.company=company,this.experience=experience;
+    }
+    get details(){
+        return [this.name,this.age,this.sex,this.experience,this.company]
+    }
+}
+let Ray=new Person("Rayuga",25,"Male","Guvi","5 Yrs")
+console.log(Ray)
+console.log(Ray.details)
+
+------------------------------------------------------------------------------------------------------------------------------------------
+class UberRide{
+    constructor(distance){
+        this.distance=distance
+    }
+    get Price(){
+        return this.distance*8;
+    }
+}
+
+let newRide= new UberRide(10);
+console.log(newRide)
+console.log(newRide.Price)
+
+
